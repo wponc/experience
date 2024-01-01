@@ -1,0 +1,144 @@
+:root {
+  --primary-color: rgb(222, 213, 178);
+  --accent-color: rgb(255, 255, 255);
+  --background-color: rgb(0, 0, 0);
+  --navbar-size: 18pt;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  user-select:none;
+  font-weight: lighter;
+  text-rendering: optimizeLegibility;
+  text-shadow:
+  0.07em 0 black,
+  0 0.07em black,
+  -0.07em 0 black,
+  0 -0.07em black;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: var(--background-color);
+}
+
+.navbar {
+  justify-content: space-between;
+  display: flex;
+  padding: 3% 5% 0% 5%;  /* syntax: top right bottom left */
+  position:relative;
+  z-index: 99;
+  width:100%;
+}
+
+#menu-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+#menu-button:hover .dropdown-content {
+  display: block;
+}
+
+#menu-button:hover .dropdown-content a {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.navbar a {
+  font-size: var(--navbar-size);
+  user-select: none;
+  font-weight: lighter;
+}
+a:hover {
+  color: white;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 50px;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+  animation: spin 20s infinite linear; 
+}
+
+.material-symbols-outlined:hover{
+  color: white;
+}
+
+.externalLink {
+  text-decoration: underline;
+}
+
+.content{
+  max-width: 100%;
+  place-content: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  color: var(--primary-color);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.landing{
+  color: var(--accent-color);
+  min-height:100vh;
+  padding-bottom: 10%;
+}
+#logos{
+  max-width: 100%;
+  max-height: 40%;
+  width: auto;
+  height: auto;
+  padding-bottom: 10%;
+}
+
+.Experience{
+  margin-top: 5%;
+  color: var(--accent-color);
+  display: grid;
+}
+.Experience h2{
+  color: var(--primary-color);
+}
+
+@keyframes spin{
+  100% {
+    transform: rotate(360deg);
+  }
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, var(--background-color) 33%, var(--primary-color) 66%, var(--background-color)99%);
+  border-radius: 1px;
+}
