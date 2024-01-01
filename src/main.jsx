@@ -24,7 +24,7 @@ function Overlay(){
             <span className="material-symbols-outlined">blur_on</span>
               <div className="dropdown-content">
                 <a href="https://will.limited">home</a>
-                <a href="https://experience.will.limited">projects</a>
+                <a href="https://projects.will.limited">projects</a>
                 <a href="https://about.will.limited">personal</a>
               </div>
           </div>
